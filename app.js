@@ -1,12 +1,24 @@
 var express = require('express');
 var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
+
 var app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-var email = 'pheonix929@gmail.com';
-var subject = 'Sending Email using Node.js';
-var data = 'That was easyer!';
+var smtpTransport = nodemailer.createTransport({
+    pool: true,
+    host: 'smtp.domain.co.za',
+    port: 587,
+    auth: {
+        user: 'email@domain.co.za',
+        pass: '*******'
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+});
 
 app.get("/", function(req, res){
 
@@ -16,39 +28,27 @@ app.get("/", function(req, res){
 
 app.post("/", function(req, res){
 
-    res.render("sent.ejs");
 
-});
-
-
-var mail = function(email, subject, data){
-
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-        user: 'amichaeltestthing@gmail.com',
-        pass: 'sometypeofpassword'
-        }
-    });
+    var email = req.body.formEmail;
+    var name = req.body.formName;
     
     var mailOptions = {
-        from: 'amichaeltestthing@gmail.com',
+        from: 'webmaster@poke.spirituallygeeky.co.za',
         to: email,
-        subject: subject,
-        text: data
+        subject: 'Mountaineer Email Test App',
+        text: name + 'thanks for signing up!'
     };
     
-    transporter.sendMail(mailOptions, function(error, info){
+    smtpTransport.sendMail(mailOptions, function(error, info){
         if (error) {
         console.log(error);
         } else {
-        console.log('Email sent: ' + info.response);
+            console.log('Email sent: ' + info.response);
+            var data = req.body;
+            res.render("sent.ejs", {data:data});
         }
     });
-
-}
-
-//mail(email, subject, data);
+});
 
 app.listen(3000, function(){
     console.log("Test App is running");

@@ -1,24 +1,22 @@
 # Firstview UI Developers Test
-This is a test that will help us review the quality of work for UI developers. This test is for developers ranging from Juniors - Seniors.
+Basic test for UI Devs
 
-# Process
-- Submit your CV to jobs@hellofirstview.com (Ignore this step if a recruiter has already contacted us).
-- Fork this repository to your own account.
-- Develop your application on your own.
-- Submit your name, and URL to your repository for checking.
+# Usage
+- Download or fork the repo.
+- run an `npm install`.
+- serv up the app by running `node app.js` inside the root directory.
 
-# Task
-Develop a responsive landing page that contains a vertically and horizontally centered form with the following fields:
-- Name
-- Email address
-- Date Selector
-- Password
+# Stack
+Developed with the following:
+- Node js
+- Bootstrap V4
+- Nodemailer
+- Express
+- Body Parser
 
-The form does not need to be functional, but spoofing a send so we can assess a successful sumbission would be beneficial. We encourage using a frontend framework like Bootstrap.
+The form is functional, but it requires smpt settings in order to function - for now i have left those settings as generic and will need to be replaced.
 
-# Assessment Points
-You will be assesed on the approach, quality, efficiency, visual style, interactions and animations. The usage of modern practices will be benificial. You are free to make use of any other frontend frameworks/tools you see fit.
-
-# Optional Extra tasks
-- Making the form submit to the entered email address
-- Fancy embellishments to show off your skills
+# NB!!
+- The SMTP details are required in order for this app to function
+- The following setting in the nodemailer.createTransport function `tls` is a security concern and is only used here for testing purposes.
+- For Productions use please make use of the nodemailer docs for more details - https://nodemailer.com
