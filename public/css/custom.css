@@ -1,6 +1,6 @@
 /*Custom styles*/
 body{
-    background: transparent url("/img/mountains.jpg") no-repeat top center fixed;
+    background: transparent url("/img/mountains3.jpg") no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -12,40 +12,26 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100%; 
+}
+
+.logo{
+    width: 50%;
 }
 
 form{
-    padding: 10px;
-    -webkit-border-radius: .3em;
-    -moz-border-radius: .3em;
-    border-radius: .3em;
-}
-
-.form-control:focus {
     color: #fff;
-    background-color: transparent;
-    border-color: transparent;
-    outline: 0;
-    box-shadow: transparent;
-    outline: none;
-}
-
-label {
-    color: #fff;
-    font-size: 1rem;
 }
 
 /* typewriter styles */
 
 .typewriter {
-    width: 330px;
+    width: 455px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
 
 .typewriter h1 {
-    color: #fff;
     font-family: monospace;
     font-size: 2.5em;
     overflow: hidden;
@@ -80,8 +66,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-bottom: 2px solid orange;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: #495057;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -89,31 +74,76 @@ select:-webkit-autofill:focus {
 /*input css*/
 input[type]
 {
-    background: transparent;
-    border: transparent;
-    border-bottom: 2px solid orange;
-    color: #fff;
-    outline: none;
     -webkit-border-radius: 0em;
     -moz-border-radius: 0em;
     border-radius: 0em;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+kbd {
+    padding: .1rem 0rem;
+    color: orange;
+    background-color: transparent!IMPORTANT;
+
 }
 
 
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color:#fff;
-}
-::-moz-placeholder { /* Firefox 19+ */
-    color:#fff;
-}
-:-ms-input-placeholder { /* IE 10+ */
-    color:#fff;
-}
-:-moz-placeholder { /* Firefox 18- */
-    color:#fff;
+/*Bootstrap overides*/
+.btn-primary {
+    color: #fff;
+    background-color: orange;
+    border-color: transparent;
+    border: 2px solid transparent;
+    border-radius: unset;
 }
 
-input::placeholder {
-    color: red;
+.btn-primary:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: unset;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0)!IMPORTANT;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+
+/*Datepicker overides*/
+.gj-datepicker-bootstrap [role=right-icon] button {
+    color: #fff;
+    background: orange;
+}
+
+.gj-datepicker-bootstrap [role=right-icon] button:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+
+/*Responsive CSS*/
+
+@media screen and (max-width: 990px) {
+    .typewriter {
+        width: 330px;
+    }
+    
+    .typewriter h1 {
+        font-size: 1.8em;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .typewriter {
+        width: 240px;
+    }
+    
+    .typewriter h1 {
+        font-size: 1.3em;
+      }
   }

@@ -1,39 +1,58 @@
 <% include partials/header %>
 <div class="main">
 
-    <div class="block"></div>
-
     <div class="container h-100">
-
-
 
         <div class="row h-100 justify-content-center align-items-center">
 
-            <form class="col-6">
+            <form class="col-12 col-sm-12 col-md-6">
+               
+                    <img class="logo mx-auto d-block" src="/img/logo.png"/>
+
                 <div class="typewriter">
-                    <h1>Well Hi There!</h1>
+                    <h1>Welcome Mountaineer!</h1>
                 </div>
-                    <div class="form-group">
-                        <label for="formName">What do we call you?</label>
-                        <input type="text" class="form-control" id="formName" placeholder="Name">
+
+                    <div class="form-row">
+                        <div class="form-group col-12 col-sm-12 col-md-6">
+                                <label for="formName">What can we call you?</label>
+                                <input type="text" class="form-control" name="formName" placeholder="First Name">
+                        </div>
+                        
+                        <div class="form-group col-12 col-sm-12 col-md-6">
+                                <label for="formLastName">What's your last name?</label>
+                                <input type="text" class="form-control" name="formLastName" placeholder="Last Name">
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label for="formEmail">Your P.O Box</label>
-                        <input type="email" class="form-control" id="formEmail" placeholder="name@example.com">
-                    </div>
+                            <label for="formEmail">Whats your electric address?</label>
+                            <input type="email" class="form-control" id="formEmail" placeholder="example@example.com">
+                    </div>           
+
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Date</label>
-                        <input id="datepicker" />
-                    </div>
-                    <div class="form-group">
-                        <label for="formPass">Password</label>
+                        <label for="formPass">Your super secret, secret!</label>
                         <input type="password" class="form-control" id="formPass" placeholder="Password">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-12 col-sm-12 col-md-6">
+                                <label for="formGroupExampleInput2">First Day on earth? (Birthday)</label>
+                                <input id="datepicker" />
+                        </div>
+
+                        <div class="form-group col-12 col-sm-12 col-md-6">
+                            <p><kbd>Hello</kbd>, we need you to let us know your birthday. Why? Well we might spoil you that day <kbd>please let us know</kbd> it's important.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit">Submit</button>
                     </div>
             </form>   
 
         </div>
     </div>
-
 </div>
 
 <% include partials/footer %>
