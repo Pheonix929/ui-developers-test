@@ -1,0 +1,29 @@
+{
+  "name": "ui-developers-test",
+  "version": "1.0.0",
+  "description": "UI/UX Developer Test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pheonix929/ui-developers-test.git"
+  },
+  "keywords": [
+    "Test",
+    "UI",
+    "UX"
+  ],
+  "author": "Michael Van Der Merwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pheonix929/ui-developers-test/issues"
+  },
+  "homepage": "https://github.com/Pheonix929/ui-developers-test#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.7"
+  }
+}

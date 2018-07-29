@@ -1,0 +1,119 @@
+/*Custom styles*/
+body{
+    background: transparent url("/img/mountains.jpg") no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.main{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+form{
+    padding: 10px;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+}
+
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: transparent;
+    outline: none;
+}
+
+label {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* typewriter styles */
+
+.typewriter {
+    width: 330px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 2.5em;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    clear: both;
+    animation: 
+      typing 3s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+  /*Reset chromes annoying yellow autocomplete*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 2px solid orange;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*input css*/
+input[type]
+{
+    background: transparent;
+    border: transparent;
+    border-bottom: 2px solid orange;
+    color: #fff;
+    outline: none;
+    -webkit-border-radius: 0em;
+    -moz-border-radius: 0em;
+    border-radius: 0em;
+}
+
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color:#fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color:#fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color:#fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color:#fff;
+}
+
+input::placeholder {
+    color: red;
+  }
