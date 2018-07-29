@@ -4,7 +4,7 @@ Basic test for UI Devs.
 # Usage
 - Download or Fork the repo.
 - Run an `npm install`.
-- Serve up the app by running `node app.js` inside the root directory.
+- Serve up the app by running `node app.js` inside the root directory it will be running here - `http://localhost:3000/`.
 
 # Stack
 Developed with the following:

@@ -21,14 +21,10 @@ var smtpTransport = nodemailer.createTransport({
 });
 
 app.get("/", function(req, res){
-
     res.render("index.ejs");
-
 });
 
 app.post("/", function(req, res){
-
-
     var email = req.body.formEmail;
     var name = req.body.formName;
     
@@ -41,7 +37,7 @@ app.post("/", function(req, res){
     
     smtpTransport.sendMail(mailOptions, function(error, info){
         if (error) {
-        console.log(error);
+            console.log(error);
         } else {
             console.log('Email sent: ' + info.response);
             var data = req.body;
