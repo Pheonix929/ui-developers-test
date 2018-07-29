@@ -33,7 +33,7 @@ app.post("/", function(req, res){
     var name = req.body.formName;
     
     var mailOptions = {
-        from: 'webmaster@poke.spirituallygeeky.co.za',
+        from: 'email@domain.co.za',
         to: email,
         subject: 'Mountaineer Email Test App',
         text: name + 'thanks for signing up!'
