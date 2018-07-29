@@ -32,7 +32,7 @@ app.post("/", function(req, res){
         from: 'email@domain.co.za',
         to: email,
         subject: 'Mountaineer Email Test App',
-        text: name + 'thanks for signing up!'
+        text: name + ' thanks for signing up!'
     };
     
     smtpTransport.sendMail(mailOptions, function(error, info){
