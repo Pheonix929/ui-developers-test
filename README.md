@@ -1,10 +1,10 @@
 # Firstview UI Developers Test
-Basic test for UI Devs
+Basic test for UI Devs.
 
 # Usage
-- Download or fork the repo.
-- run an `npm install`.
-- serv up the app by running `node app.js` inside the root directory.
+- Download or Fork the repo.
+- Run an `npm install`.
+- Serve up the app by running `node app.js` inside the root directory.
 
 # Stack
 Developed with the following:
@@ -17,6 +17,6 @@ Developed with the following:
 The form is functional, but it requires smpt settings in order to function - for now i have left those settings as generic and will need to be replaced.
 
 # NB!!
-- The SMTP details are required in order for this app to function
+- The SMTP details are required in order for this app to function.
 - The following setting in the nodemailer.createTransport function `tls` is a security concern and is only used here for testing purposes.
-- For Productions use please make use of the nodemailer docs for more details - https://nodemailer.com
+- For Production please make use of the nodemailer docs for more details - https://nodemailer.com
